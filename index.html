@@ -36,7 +36,41 @@
         <li>Moving & Relocation Services</li>
     </ul>
 </section>
-<section style="padding:40px; background:#330000;">
+<section style="padding:40px;" id="contact">
+    <h2 style="color:gold;">Book a Service</h2>
+
+    <form onsubmit="submitForm(event)">
+        <input type="text" id="name" placeholder="Full Name" required style="padding:10px; width:100%; margin-bottom:10px;"><br>
+
+        <input type="email" id="email" placeholder="Email Address" required style="padding:10px; width:100%; margin-bottom:10px;"><br>
+
+        <input type="tel" id="phone" placeholder="Phone Number" required style="padding:10px; width:100%; margin-bottom:10px;"><br>
+
+        <select id="serviceType" style="padding:10px; width:100%; margin-bottom:10px;">
+            <option>Freight Transport</option>
+            <option>Construction Clearing</option>
+            <option>Garbage Disposal</option>
+            <option>Moving Services</option>
+        </select><br>
+
+        <textarea id="details" placeholder="Service Details..." style="padding:10px; width:100%; margin-bottom:10px;"></textarea><br>
+
+        <button type="submit" style="padding:10px 20px; background:gold; border:none;">
+            Submit Request
+        </button>
+    </form>
+
+    <p id="formMessage" style="margin-top:15px;"></p>
+</section>
+
+<script>
+function submitForm(event) {
+    event.preventDefault();
+
+    document.getElementById("formMessage").innerHTML =
+        "Request submitted successfully! We will contact you shortly.";
+}
+</script>
     <h2 style="color:gold;">Get a Price Estimate</h2>
 
     <label>Service Type:</label><br><br>
