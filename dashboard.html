@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #1a0000;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            color: gold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid gold;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #330000;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Bookings Dashboard</h1>
+
+<table id="table">
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Service</th>
+        <th>Details</th>
+    </tr>
+</table>
+
+<script>
+let data = JSON.parse(localStorage.getItem("bookings")) || [];
+
+let table = document.getElementById("table");
+
+data.forEach(b => {
+    let row = table.insertRow();
+    row.innerHTML =
+        "<td>"+b.name+"</td>" +
+        "<td>"+b.phone+"</td>" +
+        "<td>"+b.service+"</td>" +
+        "<td>"+b.details+"</td>";
+});
+</script>
+
+</body>
+</html>
