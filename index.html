@@ -185,7 +185,29 @@ footer {
 
     <p id="formMessage" style="margin-top:15px;"></p>
 </section>
+<section style="padding:60px 20px; text-align:center; background:#260000;">
 
+    <h2 style="color:gold;">Our Impact</h2>
+
+    <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:30px;">
+
+        <div>
+            <h1 id="stat1">0</h1>
+            <p>Deliveries Completed</p>
+        </div>
+
+        <div>
+            <h1 id="stat2">0</h1>
+            <p>Active Clients</p>
+        </div>
+
+        <div>
+            <h1 id="stat3">0</h1>
+            <p>Operations Coverage</p>
+        </div>
+
+    </div>
+</section>
 <script>
 function submitForm(event) {
     event.preventDefault();
@@ -255,7 +277,29 @@ function submitForm(event) {
     Pay via M-Pesa
 </button>
 </section>
+<script>
+function animateValue(id, start, end, duration) {
+    let obj = document.getElementById(id);
+    let range = end - start;
+    let current = start;
+    let increment = end > start ? 1 : -1;
+    let stepTime = Math.abs(Math.floor(duration / range));
 
+    let timer = setInterval(function() {
+        current += increment;
+        obj.innerHTML = current + "+";
+        if (current == end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
+
+window.onload = function() {
+    animateValue("stat1", 0, 10000, 2000);
+    animateValue("stat2", 0, 500, 2000);
+    animateValue("stat3", 0, 24, 2000);
+};
+                 </script>
 <script>
 function calculate() {
     let service = document.getElementById("service").value;
