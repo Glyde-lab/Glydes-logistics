@@ -67,8 +67,23 @@
 function submitForm(event) {
     event.preventDefault();
 
-    document.getElementById("formMessage").innerHTML =
-        "Request submitted successfully! We will contact you shortly.";
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let service = document.getElementById("serviceType").value;
+    let details = document.getElementById("details").value;
+
+    let message = "New Booking Request:%0A"
+        + "Name: " + name + "%0A"
+        + "Phone: " + phone + "%0A"
+        + "Service: " + service + "%0A"
+        + "Details: " + details;
+
+    let whatsappNumber = "254710482331"; // ← CHANGE THIS
+
+    let url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+    window.open(url, "_blank");
+}
 }
 </script>
     <h2 style="color:gold;">Get a Price Estimate</h2>
