@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a0000;
+    color: white;
+}
+
+header {
+    background: #4b0000;
+    color: gold;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: gold;
+}
+
+.footer {
+    background: #4b0000;
+    color: gold;
+    text-align: center;
+    padding: 10px;
+}
