@@ -132,7 +132,17 @@ function calculate() {
     <p>Phone: +254 710 482 331</p>
     <p>Location: Nairobi, Kenya</p>
 </section>
+function payNow() {
+    let message = "Pay via M-Pesa to:%0A"
+        + "Business Name: Glyde's Logistics LTD%0A"
+        + "Number: 0710482331%0A"
+        + "Amount: (Use calculated estimate)%0A"
+        + "Then send confirmation on WhatsApp.";
 
+    let url = "https://wa.me/254712345678?text=" + message;
+
+    window.open(url, "_blank");
+    }
 <footer>
     © 2026 Glyde's Logistics LTD | Logistical Competence
 </footer>
