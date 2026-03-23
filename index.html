@@ -156,6 +156,29 @@ footer {
 function submitForm(event) {
     event.preventDefault();
 
+    let booking = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        service: document.getElementById("serviceType").value,
+        details: document.getElementById("details").value
+    };
+
+    let data = JSON.parse(localStorage.getItem("bookings")) || [];
+    data.push(booking);
+    localStorage.setItem("bookings", JSON.stringify(data));
+
+    document.getElementById("formMessage").innerHTML =
+        "Request saved! Opening WhatsApp...";
+
+    let message = "New Booking:%0A"
+        + "Name: " + booking.name + "%0A"
+        + "Phone: " + booking.phone + "%0A"
+        + "Service: " + booking.service;
+
+    window.open("https://wa.me/254712345678?text=" + message, "_blank");
+} {
+    event.preventDefault();
+
     let name = document.getElementById("name").value;
     let phone = document.getElementById("phone").value;
     let service = document.getElementById("serviceType").value;
