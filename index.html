@@ -36,7 +36,43 @@
         <li>Moving & Relocation Services</li>
     </ul>
 </section>
+<section style="padding:40px; background:#330000;">
+    <h2 style="color:gold;">Get a Price Estimate</h2>
 
+    <label>Service Type:</label><br><br>
+    <select id="service" style="padding:10px;">
+        <option value="100">Freight Transport</option>
+        <option value="200">Construction Clearing</option>
+        <option value="150">Garbage Disposal</option>
+        <option value="250">Moving Services</option>
+    </select><br><br>
+
+    <label>Distance (KM):</label><br><br>
+    <input type="number" id="distance" placeholder="Enter distance" style="padding:10px;"><br><br>
+
+    <button onclick="calculate()" style="padding:10px 20px; background:gold; border:none;">
+        Calculate Price
+    </button>
+
+    <h3 id="result" style="margin-top:20px;"></h3>
+</section>
+
+<script>
+function calculate() {
+    let service = document.getElementById("service").value;
+    let distance = document.getElementById("distance").value;
+
+    if(distance === "") {
+        document.getElementById("result").innerHTML = "Please enter distance.";
+        return;
+    }
+
+    let total = service * distance;
+
+    document.getElementById("result").innerHTML =
+        "Estimated Cost: KES " + total;
+}
+</script>
 <section style="padding:40px;" id="contact">
     <h2 style="color:gold;">Contact Us</h2>
     <p>Email: info@glydeslogistics.com</p>
