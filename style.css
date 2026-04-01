@@ -26,3 +26,84 @@ h1, h2 {
     text-align: center;
     padding: 10px;
 }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2b0000;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('logo-watermark.png') no-repeat center center/cover;
+}
+
+.overlay {
+  background: rgba(40, 0, 20, 0.75);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: gold;
+  text-align: center;
+}
+
+.cta-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: gold;
+  color: #3b0a0a;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #3b0a0a;
+  color: gold;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* QUOTE */
+#quote {
+  text-align: center;
+  padding: 40px;
+  color: gold;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+}
+
+/* TRUST */
+.trust {
+  padding: 40px;
+  color: gold;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .services {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+}
