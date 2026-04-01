@@ -7,11 +7,61 @@
 
     <style>
         <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #1a0000;
-    color: white;
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="overlay">
+    <h1>Global Logistics. Local Precision.</h1>
+    <p>Delivering efficiency, reliability, and excellence across every mile.</p>
+    <a href="#quote" class="cta-btn">Get a Quote</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="card">
+    <h3>Global Freight</h3>
+    <p>Air, sea, and land freight solutions worldwide.</p>
+  </div>
+
+  <div class="card">
+    <h3>Waste Management</h3>
+    <p>Domestic & commercial garbage disposal.</p>
+  </div>
+
+  <div class="card">
+    <h3>Relocation</h3>
+    <p>Seamless moving services across regions.</p>
+  </div>
+</section>
+
+<!-- QUOTE CALCULATOR -->
+<section id="quote">
+  <h2>Get Instant Quote</h2>
+
+  <input type="number" id="distance" placeholder="Distance (km)">
+  <input type="number" id="weight" placeholder="Weight (kg)">
+  
+  <button onclick="calculate()">Calculate</button>
+
+  <h3 id="result"></h3>
+</section>
+
+<!-- TRUST SECTION -->
+<section class="trust">
+  <h2>Why Choose Glyde’s Logistics</h2>
+  <ul>
+    <li>✔ Global Coverage</li>
+    <li>✔ Reliable Delivery</li>
+    <li>✔ Competitive Pricing</li>
+    <li>✔ Professional Handling</li>
+  </ul>
+</section>
+
+<script src="script.js"></script>
+
+</body>
 }
 
 header {
